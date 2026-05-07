@@ -1,6 +1,6 @@
 cask "notchout" do
-  version "1.0.0"
-  sha256 "a985cf27d497c040d1bc2c42b125ff29af9bfc43f02c812721faa1a8c2f6dc64"
+  version "1.0.1"
+  sha256 "797a1d12d9702d7dd4ddc5edefb862031c65dbc69daf29d64fd236c2cb3897fd"
 
   url "https://github.com/hoorangyee/notchout/releases/download/v#{version}/NotchOut-#{version}.zip",
       verified: "github.com/hoorangyee/notchout/"
