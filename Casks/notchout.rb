@@ -13,6 +13,13 @@ cask "notchout" do
 
   app "NotchOut.app"
 
+  # The app is ad-hoc signed (no paid Apple Developer ID), so macOS adds a
+  # quarantine attribute on download that Gatekeeper enforces. Strip it after
+  # install so the app launches without "unverified developer" prompts.
+  postflight do
+    system "/usr/bin/xattr", "-dr", "com.apple.quarantine", "#{appdir}/NotchOut.app"
+  end
+
   uninstall quit: "com.notchout.app"
 
   zap trash: [
